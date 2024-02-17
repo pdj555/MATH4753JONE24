@@ -7,14 +7,21 @@
 outliers(I)
 }
 \arguments{
-\item{I}{variable in vector}
+\item{I}{Numeric vector for which to find outliers.}
 }
 \value{
-z values, z values greater than 3, z values that are possible outliers, I values corresponding to these z values
+A list containing:
+\itemize{
+  \item{z}{All z-scores of the input vector.}
+  \item{outliers}{Z-scores greater than 3.}
+  \item{outlier_values}{I values corresponding to z-scores greater than 3.}
+  \item{potential_outliers}{Z-scores between 2 and 3.}
+  \item{potential_outlier_values}{I values corresponding to z-scores between 2 and 3.}
+}
 }
 \description{
-Find Outliers
+Identifies outliers in a numeric vector based on z-scores. Outliers are defined as observations with z-scores greater than 3, and potential outliers are those with z-scores between 2 and 3.
 }
 \examples{
-outliers(I = I.df$IRON)
+outliers(I = c(1, 2, 3, 4, 100))
 }
