@@ -3,6 +3,9 @@
 #' This function simulates binomial experiments, where each experiment consists of `n` trials
 #' with success probability `p`, and creates a barplot for the proportions of successes.
 #'
+#' @importFrom graphics barplot
+#' @importFrom grDevices rainbow
+#'
 #' @param iter The number of iterations to simulate.
 #' @param n The number of trials per iteration.
 #' @param p The probability of success on each trial.

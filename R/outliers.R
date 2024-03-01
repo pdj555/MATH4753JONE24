@@ -2,6 +2,8 @@
 #'
 #' Identifies outliers in a numeric vector based on z-scores. Outliers are defined as observations with z-scores greater than 3, and potential outliers are those with z-scores between 2 and 3.
 #'
+#' @importFrom stats sd
+#'
 #' @param I Numeric vector for which to find outliers.
 #' @return A list containing:
 #' \itemize{
