@@ -1,0 +1,27 @@
+#' Fire Damages and Distance
+#'
+#' A dataset showing the relationship between distance and fire damage.
+#'
+#' @format A data frame with 15 rows and 2 columns:
+#' \describe{
+#'   \item{DISTANCE}{The distance from the fire source.}
+#'   \item{DAMAGE}{The damage caused by the fire.}
+#' }
+#' @source Provide by prof
+"firedam"
+DISTANCE,DAMAGE
+3.4,26.2
+1.8,17.8
+4.6,31.3
+2.3,23.1
+3.1,27.5
+5.5,36
+0.7,14.1
+3,22.3
+2.6,19.6
+4.3,31.3
+2.1,24
+1.1,17.3
+6.1,43.2
+4.8,36.4
+3.8,26.1
