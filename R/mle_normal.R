@@ -5,8 +5,11 @@
 #'
 #' @param data A numeric vector of data points assumed to be drawn from a normal distribution.
 #' @return A list containing the maximum likelihood estimates for mean and standard deviation.
+#'
 #' @importFrom stats optim
+#'
 #' @export
+#'
 #' @examples
 #' sample_data <- rnorm(100, mean = 50, sd = 10)
 #' mle_normal(sample_data)

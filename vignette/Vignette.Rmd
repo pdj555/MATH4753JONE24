@@ -1,0 +1,78 @@
+---
+title: "Statistical Tools in MATH4753JONE24"
+author: "Preston Jones"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{Statistical Tools in MATH4753JONE24}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+
+This vignette provides an overview of the MATH4753JONE24 package, which includes a suite of functions designed to facilitate common statistical analyses and demonstrations. These tools are particularly useful for educational purposes and real-world data analysis scenarios.
+
+# Package Functions
+
+The package includes several functions, which we will demonstrate with practical examples below.
+
+```{r}
+library(MATH4753JONE24)
+```
+
+
+## 1. Maximum Likelihood Estimation for Normal Distribution
+
+The `mle_normal` function estimates the mean and standard deviation of a normally distributed sample.
+
+```{r}
+# Simulating normal distribution data
+sample_data <- rnorm(100, mean = 50, sd = 10)
+estimates <- mle_normal(sample_data)
+print(estimates)
+```
+
+## 2. Simulating Binomial Experiments
+
+The `mybin` function simulates binomial experiments and visualizes the distribution of successes.
+
+```{r}
+proportions <- mybin(100, 10, 0.7)
+```
+
+## 3. Demonstrating the Central Limit Theorem
+
+`myclt` demonstrates the Central Limit Theorem (CLT) by taking samples from a uniform distribution.
+
+```{r}
+means <- myclt(n = 10, iter = 1000, a = 0, b = 5)
+hist(means, main="Sample Means (CLT)")
+```
+
+## 4. Bootstrapping for Confidence Intervals
+
+`myboot2` uses bootstrapping to estimate confidence intervals for a specified statistic.
+
+```{r}
+set.seed(68)
+sample_data <- rnorm(20, mean = 10, sd = 4)
+bootstrap_results <- myboot2(x = sample_data)
+print(bootstrap_results)
+```
+
+# Conclusion
+
+MATH4753JONE24 provides powerful statistical tools that are essential for students and researchers working with statistical data. This vignette has introduced these tools and shown how to use them effectively in various statistical tasks.
+
+
+
